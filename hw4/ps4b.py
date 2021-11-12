@@ -261,6 +261,11 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
+        message_list = self.message_text.split(" ")
+        
+        
+        is_word(word_list, word)
+        
         pass #delete this line and replace with your code here
 
 if __name__ == '__main__':
