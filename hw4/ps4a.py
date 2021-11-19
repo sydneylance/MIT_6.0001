@@ -22,8 +22,25 @@ def get_permutations(sequence):
     Note: depending on your implementation, you may return the permutations in
     a different order than what is listed here.
     '''
+    
+    if len(sequence) == 1:
+        return sequence
+    
+    perms = get_permutations(sequence[1:])
+    
+    first_letter = sequence[0]
+    
+    permutations = []
+    
+    for perm in perms:
+        for i in range(len(perm) + 1):
+            permutations.append(perm[:i] + first_letter + perm[i:])
+    
+    return permutations
 
-    pass #delete this line and replace with your code here
+
+
+
 
 if __name__ == '__main__':
 #    #EXAMPLE
